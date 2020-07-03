@@ -6,7 +6,7 @@ const NewSongForm = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addSong(title);
+    addSong(title.trim());
   };
 
   return (
@@ -14,7 +14,7 @@ const NewSongForm = (props) => {
       <label>Song name:</label>
       <input
         type="text"
-        onChange={(e) => setTitle(e.target.value.trim())}
+        onChange={(e) => setTitle(e.target.value)}
         required
         value={title}
       />
